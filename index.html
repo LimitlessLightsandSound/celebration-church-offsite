@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Limitless × Celebration Church — Offsite Activation // October 2026</title>
+<meta name="description" content="Technical production proposal for the Celebration Church Georgetown offsite activation, Sunday 4 October 2026. Quotation 1678 from Limitless Lights + Sound.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Archivo:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0f0c0a;
+    --ink-2:#181310;
+    --slate:#211a16;
+    --gold:#e6c17d;
+    --gold-2:#c9a35e;
+    --stone:#b9ab92;
+    --stone-2:#8a7f6d;
+    --ivory:#f4f0ea;
+    --paper:#d5ccc2;
+    --mute:#968c81;
+    --line:rgba(230,193,125,.18);
+    --line-soft:rgba(230,193,125,.09);
+    --line-stone:rgba(185,171,146,.20);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--ink);color:var(--paper);
+    font-family:'Archivo',sans-serif;font-weight:300;line-height:1.7;
+    -webkit-font-smoothing:antialiased;overflow-x:hidden;
+  }
+
+  .glow{position:fixed;inset:0;z-index:0;pointer-events:none;
+    background:
+      radial-gradient(52vw 52vh at 84% 2%, rgba(230,193,125,.12), transparent 62%),
+      radial-gradient(46vw 42vh at 6% 34%, rgba(185,171,146,.07), transparent 58%),
+      radial-gradient(58vw 52vh at 50% 106%, rgba(230,193,125,.075), transparent 60%);}
+  .grain{position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.03;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");}
+
+  .wrap{position:relative;z-index:2;max-width:1040px;margin:0 auto;padding:0 36px}
+
+  .eyebrow{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:500;
+    font-size:19px;letter-spacing:.02em;color:var(--gold);}
+  h1,h2,h3,.display{font-family:'Bebas Neue',sans-serif;font-weight:400;color:var(--ivory);line-height:1;letter-spacing:.015em}
+  .serif{font-family:'Cormorant Garamond',serif}
+
+  /* ————— HERO ————— */
+  /* OPTION A (default): no photography. */
+  .hero{position:relative;overflow:hidden;min-height:96vh;display:flex;flex-direction:column;justify-content:space-between;padding:44px 0 56px}
+  .hero-bg{position:absolute;inset:0;z-index:0;
+    background:
+      radial-gradient(72vw 70vh at 80% -10%, rgba(230,193,125,.20), transparent 60%),
+      radial-gradient(58vw 58vh at 10% 44%, rgba(185,171,146,.085), transparent 58%),
+      radial-gradient(84vw 46vh at 50% 110%, rgba(230,193,125,.11), transparent 60%),
+      linear-gradient(172deg, #16110d 0%, var(--ink) 55%, #0a0806 100%);}
+  .hero-bg::before{content:'';position:absolute;inset:0;
+    background-image:linear-gradient(rgba(230,193,125,.05) 1px, transparent 1px);
+    background-size:100% 92px;
+    -webkit-mask-image:radial-gradient(72% 62% at 52% 40%, #000 10%, transparent 76%);
+    mask-image:radial-gradient(72% 62% at 52% 40%, #000 10%, transparent 76%);}
+  .hero-bg::after{content:'';position:absolute;inset:0;
+    background:linear-gradient(180deg, transparent 62%, rgba(15,12,10,.7) 84%, var(--ink) 100%);}
+
+  /* --- OPTION B: with a hero photograph. Swap for the three .hero-bg rules above.
+  .hero-bg{position:absolute;inset:0;z-index:0;
+    background:
+      linear-gradient(180deg, rgba(15,12,10,.54) 0%, rgba(15,12,10,.66) 42%, rgba(15,12,10,.9) 80%, var(--ink) 100%),
+      radial-gradient(58vw 58vh at 82% 6%, rgba(230,193,125,.16), transparent 60%),
+      url('img/hero.jpg') center 48%/cover no-repeat;}
+  .hero-bg::after{content:'';position:absolute;inset:0;
+    box-shadow:inset 0 -130px 120px -40px var(--ink), inset 0 100px 90px -50px rgba(15,12,10,.65)}
+  --- */
+
+  .topbar{display:flex;justify-content:space-between;align-items:flex-start;gap:20px}
+  .logo{font-family:'Bebas Neue';font-size:27px;letter-spacing:.17em;color:var(--ivory)}
+  .logo img{display:block;width:150px;height:auto}
+  .logo:hover{opacity:.88;transition:opacity .4s}
+  .logo small{display:block;font-family:'Cormorant Garamond';font-style:italic;font-size:13px;letter-spacing:.06em;color:var(--stone-2);margin-top:2px}
+  .forwhom{text-align:right;font-family:'Cormorant Garamond',serif;font-size:17.5px;color:var(--stone-2);line-height:1.7;font-style:italic;font-weight:500}
+  .forwhom b{color:var(--gold);font-weight:600;font-style:normal;display:block;font-family:'Archivo';font-size:13px;letter-spacing:.02em;margin:2px 0 1px}
+
+  .hero-mid{max-width:900px}
+  .hero-rule{width:58px;height:1px;background:linear-gradient(90deg,var(--gold),transparent);margin-bottom:26px}
+  .hero .eyebrow{display:block;margin-bottom:24px}
+  .hero h1{font-size:clamp(50px,8.6vw,112px);text-shadow:0 0 90px rgba(230,193,125,.22)}
+  .hero h1 em{font-style:normal;color:var(--gold);display:block}
+  .hero-lede{font-size:clamp(16px,1.9vw,20px);color:var(--paper);max-width:56ch;margin-top:28px;line-height:1.72}
+  .hero-foot{display:flex;flex-wrap:wrap;gap:40px;margin-top:6px}
+  .hf .k{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:16.5px;color:var(--stone-2);margin-bottom:2px;font-weight:500}
+  .hf .v{font-family:'Archivo';font-size:15px;font-weight:400;color:var(--ivory)}
+
+  /* ————— sections ————— */
+  section{padding:66px 0}
+  .sec-eyebrow{display:block;margin-bottom:16px}
+  .sec-title{font-size:clamp(34px,5vw,60px);max-width:19ch;margin-bottom:20px;text-shadow:0 0 60px rgba(230,193,125,.13)}
+  .sec-intro{font-size:17px;color:var(--paper);max-width:62ch;line-height:1.7}
+
+  /* ————— POSITIONING ————— */
+  .lead-statement{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(27px,3.7vw,46px);line-height:1.28;color:var(--ivory);max-width:23ch}
+  .lead-statement b{font-weight:600;color:var(--gold);font-style:italic}
+  .promise-row{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-top:48px}
+  .promise-col .kk{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:17px;color:var(--gold);margin-bottom:12px;display:block}
+  .promise-col h3{font-family:'Bebas Neue';font-size:29px;color:var(--ivory);margin-bottom:12px;letter-spacing:.04em}
+  .promise-col p{font-size:15.5px;color:var(--paper);line-height:1.72}
+
+  /* ————— ROOM CARDS ————— */
+  .rooms{display:flex;flex-direction:column;gap:18px}
+  .room{position:relative;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:linear-gradient(180deg,var(--ink-2),var(--ink));transition:border-color .6s,transform .6s}
+  .room:hover{border-color:rgba(230,193,125,.32);transform:translateY(-2px)}
+  .room-media{position:relative;min-height:260px;overflow:hidden}
+  .room-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1.3s ease}
+  .room:hover .room-media img{transform:scale(1.04)}
+  .room-media::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(24,19,16,.24),rgba(24,19,16,.55) 55%,var(--ink-2) 99%)}
+  .room-inner{position:relative;z-index:1;padding:38px 42px}
+  .room-head{display:flex;justify-content:space-between;align-items:flex-start;gap:24px;flex-wrap:wrap;padding-bottom:20px;border-bottom:1px solid var(--line-soft)}
+  .room-num{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:16px;color:var(--stone);opacity:.8;margin-bottom:6px;font-weight:500}
+  .room-label{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:17px;color:var(--gold);margin-bottom:4px}
+  .room h3{font-family:'Bebas Neue';font-size:clamp(29px,4vw,40px);color:var(--ivory);letter-spacing:.03em}
+  .room-price{text-align:right;flex-shrink:0}
+  .room-price .amt{font-family:'Bebas Neue';font-size:31px;color:var(--gold);letter-spacing:.02em;line-height:1.1}
+  .room-price .cap{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:15px;color:var(--stone-2);font-weight:500}
+
+  .room-meta{display:flex;flex-wrap:wrap;gap:10px 34px;padding:18px 0 4px}
+  .rm{font-size:13.5px;color:var(--paper)}
+  .rm span{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:15.5px;color:var(--stone-2);margin-right:7px;font-weight:500}
+
+  .spec{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:26px 34px;margin-top:20px;padding-top:22px;border-top:1px solid var(--line-soft)}
+  .spec-col .h{font-family:'Archivo';font-size:11.5px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:var(--gold);margin-bottom:11px}
+  .spec-col ul{list-style:none;display:flex;flex-direction:column;gap:8px}
+  .spec-col li{font-size:14px;color:var(--paper);line-height:1.5;padding-left:15px;position:relative}
+  .spec-col li::before{content:'—';position:absolute;left:0;top:0;color:var(--gold);opacity:.55}
+
+  .room-crew{margin-top:22px;padding-top:18px;border-top:1px solid var(--line-soft);font-size:14px;color:var(--paper)}
+  .room-crew b{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:500;font-size:16.5px;color:var(--gold)}
+
+  .addon{margin-top:16px;padding:18px 22px;border-radius:12px;background:linear-gradient(120deg,rgba(185,171,146,.07),rgba(24,19,16,.6));border:1px solid var(--line-stone)}
+  .addon .at{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:17px;color:var(--stone);margin-bottom:6px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+  .addon .at b{font-family:'Bebas Neue';font-style:normal;font-size:22px;color:var(--gold);letter-spacing:.02em}
+  .addon p{font-size:14px;color:var(--paper);line-height:1.6}
+
+  /* ————— BACKBONE ————— */
+  .incl{display:grid;grid-template-columns:repeat(2,1fr);gap:36px}
+  .incl-card .h{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:23px;color:var(--gold);margin-bottom:6px}
+  .incl-card .sub{font-family:'Archivo';font-size:12px;font-weight:400;letter-spacing:.02em;color:var(--stone-2);margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid var(--line-soft)}
+  .incl-card ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+  .incl-card li{font-size:14.5px;color:var(--paper);line-height:1.5;padding-left:16px;position:relative}
+  .incl-card li::before{content:'—';position:absolute;left:0;top:0;color:var(--gold);opacity:.6}
+
+  /* ————— STATS STRIP ————— */
+  .stats{display:grid;grid-template-columns:repeat(5,1fr);gap:18px;margin-top:48px;padding:34px 0;
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .stat{text-align:center}
+  .stat .n{font-family:'Bebas Neue';font-size:clamp(34px,4.6vw,50px);color:var(--gold);line-height:1;letter-spacing:.02em;text-shadow:0 0 50px rgba(230,193,125,.25)}
+  .stat .l{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:16px;color:var(--stone-2);margin-top:8px;line-height:1.4;font-weight:500}
+
+
+  /* ————— GALLERY (only if using photography) ————— */
+  .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:46px}
+  .gallery figure{position:relative;border:1px solid var(--line);border-radius:14px;overflow:hidden;aspect-ratio:4/3}
+  .gallery img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 1.2s ease}
+  .gallery figure:hover img{transform:scale(1.05)}
+  .gallery figcaption{position:absolute;left:0;right:0;bottom:0;padding:30px 18px 13px;
+    background:linear-gradient(0deg,rgba(15,12,10,.94),rgba(15,12,10,.4) 60%,transparent);
+    font-family:'Cormorant Garamond',serif;font-style:italic;font-size:15px;color:var(--paper)}
+
+  /* ————— TIMELINE ————— */
+  .timeline{margin-top:10px}
+  .tl-row{display:grid;grid-template-columns:190px 1fr;gap:32px;padding:22px 0;border-bottom:1px solid var(--line-soft);align-items:baseline}
+  .tl-row:last-child{border-bottom:none}
+  .tl-when .date{font-family:'Bebas Neue';font-size:25px;color:var(--gold);letter-spacing:.04em;line-height:1.05}
+  .tl-when .day{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:16.5px;color:var(--stone-2);font-weight:500}
+  .tl-what h3{font-family:'Archivo';font-size:17px;font-weight:600;color:var(--ivory);margin-bottom:4px;display:inline-block}
+  .tl-what .star{color:var(--gold);margin-left:8px;font-size:15px}
+  .tl-what p{font-size:14.5px;color:var(--paper);line-height:1.6;max-width:60ch}
+
+  /* ————— VENUE REQS ————— */
+  .reqs{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+  .req{padding:26px 28px;border:1px solid var(--line-stone);border-radius:14px;background:linear-gradient(150deg,rgba(185,171,146,.05),rgba(24,19,16,.5))}
+  .req .rt{font-family:'Archivo';font-size:11.5px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:var(--stone);margin-bottom:9px}
+  .req h3{font-family:'Bebas Neue';font-size:25px;color:var(--ivory);letter-spacing:.04em;margin-bottom:9px}
+  .req p{font-size:14.5px;color:var(--paper);line-height:1.65}
+  .req b{color:var(--gold);font-weight:600}
+
+  /* ————— INVESTMENT ————— */
+  .invest{background:linear-gradient(150deg,var(--slate),var(--ink-2));border:1px solid var(--line);border-radius:18px;padding:52px 52px;position:relative;overflow:hidden}
+  .invest::after{content:'';position:absolute;top:-30%;left:76%;transform:translateX(-50%);width:70%;height:160%;background:radial-gradient(closest-side,rgba(230,193,125,.14),transparent);pointer-events:none}
+  .inv-in{position:relative;z-index:1}
+  .inv-label{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:20px;color:var(--gold);margin-bottom:6px;text-align:center}
+  .inv-sub{text-align:center;font-size:13.5px;color:var(--stone-2);margin-bottom:22px}
+  .inv-figure{font-family:'Bebas Neue';font-size:clamp(54px,9.4vw,112px);color:var(--gold);line-height:.9;letter-spacing:.01em;text-shadow:0 0 70px rgba(230,193,125,.32);text-align:center}
+  .inv-figure span{font-size:.42em;vertical-align:baseline}
+  .inv-figcap{text-align:center;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:17.5px;color:var(--paper);margin-top:12px;font-weight:500}
+
+  .inv-lines{max-width:600px;margin:34px auto 0;border-top:1px solid var(--line-soft)}
+  .inv-line{display:flex;justify-content:space-between;align-items:baseline;gap:20px;padding:14px 2px;border-bottom:1px solid var(--line-soft);font-size:15px}
+  .inv-line .lab{color:var(--paper)}
+  .inv-line .lab small{display:block;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:15px;color:var(--stone-2);margin-top:2px;font-weight:500}
+  .inv-line .val{font-family:'Archivo';font-weight:400;color:var(--ivory);white-space:nowrap}
+  .inv-line.sub-line .lab{padding-left:16px;font-size:14px;color:var(--mute)}
+  .inv-line.sub-line .val{font-size:14px;color:var(--paper)}
+  .inv-line.tax .val{color:var(--gold)}
+  .inv-line.total{border-bottom:none;padding-top:18px}
+  .inv-line.total .lab{font-family:'Bebas Neue';font-size:22px;letter-spacing:.04em;color:var(--ivory)}
+  .inv-line.total .val{font-family:'Bebas Neue';font-size:26px;letter-spacing:.03em;color:var(--ivory)}
+  .inv-head{font-family:'Archivo';font-size:11.5px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:var(--gold);padding:24px 2px 8px;border-bottom:1px solid var(--line-soft)}
+
+  .saved{margin-top:26px;padding:24px 28px;border-radius:14px;background:linear-gradient(120deg,rgba(185,171,146,.08),rgba(24,19,16,.6));border:1px solid var(--line-stone)}
+  .saved .et{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:19px;color:var(--stone);margin-bottom:8px}
+  .saved p{font-size:14.5px;color:var(--paper);line-height:1.66;max-width:68ch}
+  .saved b{color:var(--gold);font-weight:600}
+  .inv-note{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:15.5px;color:var(--stone-2);margin-top:22px;text-align:center;line-height:1.6;font-weight:500}
+
+  /* ————— GOOD TO KNOW ————— */
+  .gtk{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
+  .gtk-item .lead{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:17px;color:var(--gold);display:block;margin-bottom:6px;font-weight:500}
+  .gtk-item h3{font-family:'Bebas Neue';font-size:23px;color:var(--ivory);letter-spacing:.04em;margin-bottom:8px}
+  .gtk-item p{font-size:14.5px;color:var(--paper);line-height:1.64}
+
+  /* ————— CLOSE ————— */
+  .close{text-align:center;padding:88px 0 64px}
+  .close h2{font-size:clamp(36px,5.8vw,74px);max-width:18ch;margin:0 auto;text-shadow:0 0 70px rgba(230,193,125,.18)}
+  .close h2 em{font-style:normal;color:var(--gold)}
+  .close p{font-size:17px;color:var(--stone-2);max-width:54ch;margin:22px auto 38px;line-height:1.7}
+  .sig{display:inline-flex;flex-direction:column;align-items:center;gap:4px;padding-top:32px;border-top:1px solid var(--line);margin-top:6px}
+  .sig .nm{font-family:'Bebas Neue';font-size:28px;color:var(--ivory);letter-spacing:.08em}
+  .sig .rl{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:17.5px;color:var(--gold);font-weight:500}
+  .sig .ct{font-family:'Archivo';font-size:13px;color:var(--stone-2);margin-top:9px;font-weight:300}
+
+  footer{border-top:1px solid var(--line-soft);padding:26px 0}
+  .foot-in{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:15.5px;color:var(--stone-2);font-weight:500}
+
+  .reveal{opacity:0;transform:translateY(20px);transition:opacity 1s cubic-bezier(.2,.6,.2,1),transform 1s cubic-bezier(.2,.6,.2,1)}
+  .reveal.in{opacity:1;transform:none}
+
+  @media (max-width:800px){
+    .wrap{padding:0 22px}
+    .logo img{width:112px}
+    .promise-row{grid-template-columns:1fr;gap:32px}
+    .room-inner{padding:28px 24px}
+    .room-media{min-height:190px}
+    .room-head{flex-direction:column;gap:14px}
+    .room-price{text-align:left}
+    .spec{grid-template-columns:1fr;gap:22px}
+    .incl{grid-template-columns:1fr;gap:30px}
+    .reqs{grid-template-columns:1fr}
+    .stats{grid-template-columns:repeat(2,1fr);gap:28px 18px;padding:28px 0}
+    .gallery{grid-template-columns:1fr;gap:12px}
+    .gtk{grid-template-columns:1fr;gap:24px}
+    .hero-foot{gap:22px}
+    .invest{padding:36px 22px}
+    .tl-row{grid-template-columns:1fr;gap:8px;padding:18px 0}
+    .tl-when{display:flex;align-items:baseline;gap:12px}
+  }
+  @media (prefers-reduced-motion:reduce){
+    .reveal{opacity:1;transform:none;transition:none}
+    html{scroll-behavior:auto}
+    .room:hover{transform:none}
+  }
+  /* ————— CREW TABLE ————— */
+  .ctab{width:100%;border-collapse:collapse;margin-top:10px;font-size:14px}
+  .ctab caption{caption-side:top;text-align:left;font-family:'Cormorant Garamond',serif;font-style:italic;
+    font-weight:500;font-size:18px;color:var(--stone);padding:22px 0 10px}
+  .ctab th{font-family:'Archivo';font-size:10.5px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;
+    color:var(--gold);text-align:left;padding:0 12px 9px 0;border-bottom:1px solid var(--line)}
+  .ctab th.r,.ctab td.r{text-align:right;padding-right:0}
+  .ctab td{padding:10px 12px 10px 0;border-bottom:1px solid var(--line-soft);color:var(--paper)}
+  .ctab tr:last-child td{border-bottom:none}
+  .ctab td.q{color:var(--ivory);font-variant-numeric:tabular-nums}
+
+  /* ————— CALLOUT PANEL ————— */
+  .cont{border:1px solid var(--line-stone);border-radius:16px;padding:32px 34px;margin-top:18px;
+    background:linear-gradient(150deg,rgba(185,171,146,.075),rgba(24,19,16,.7))}
+  .cont .rt{font-family:'Archivo';font-size:10.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--stone);margin-bottom:10px}
+  .cont h3{font-family:'Bebas Neue';font-size:27px;color:var(--ivory);letter-spacing:.03em;margin-bottom:12px}
+  .cont p{font-size:15px;color:var(--paper);line-height:1.68;max-width:72ch}
+  .cont b{color:var(--gold);font-weight:600}
+  @media (max-width:800px){ .cont{padding:24px 20px} .ctab{font-size:13px} }
+</style>
+</head>
+<body>
+<div class="glow"></div>
+<div class="grain"></div>
+
+<!-- ═══ HERO ═══ -->
+<header class="hero">
+  <div class="hero-bg"></div>
+  <div class="wrap" style="width:100%">
+    <div class="topbar">
+      <a class="logo" href="https://limitlesslightsandsound.com" target="_blank" rel="noopener"><img src="img/limitless-logo.png" alt="Limitless Lights + Sound"></a>
+      <div class="forwhom">
+        prepared for
+        <b>TJ Thornton</b>
+        <span>Celebration Church Georgetown</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap" style="width:100%">
+    <div class="hero-mid">
+      <div class="hero-rule"></div>
+      <span class="eyebrow">Offsite Activation — Sunday, October 4, 2026</span>
+      <h1>A room you<br>don't own yet.<br><em>Handled either way.</em></h1>
+      <p class="hero-lede">This package is deliberately self-sufficient. Its own generator, its own distro, ground-supported LED and ground-stacked L'Acoustics, nothing flown and nothing that depends on what the venue turns out to have. We set it on Friday, leave it dark Saturday, and hand you a room that has already been running for two days before anyone walks in Sunday afternoon.</p>
+    </div>
+  </div>
+
+  <div class="wrap" style="width:100%">
+    <div class="hero-foot">
+      <div class="hf"><div class="k">for</div><div class="v">Celebration Church Georgetown</div></div>
+      <div class="hf"><div class="k">service</div><div class="v">Sun, Oct 4 · 2:00–8:00 PM</div></div>
+      <div class="hf"><div class="k">our role</div><div class="v">Full technical production</div></div>
+      <div class="hf"><div class="k">reference</div><div class="v">Quotation № 1678</div></div>
+    </div>
+  </div>
+</header>
+
+<!-- ═══ POSITIONING ═══ -->
+<section id="positioning">
+  <div class="wrap">
+    <span class="eyebrow sec-eyebrow reveal">How we've built this</span>
+    <p class="lead-statement reveal">The venue is still being confirmed, so we engineered the package <b>not to care.</b></p>
+
+    <div class="promise-row reveal">
+      <div class="promise-col">
+        <span class="kk">Venue-agnostic by design</span>
+        <h3>We bring our own everything</h3>
+        <p>The quote carries a generator, an Indu Cube 120/208V Socapex and L2130 distro, camlock turnarounds and a full cable trunk. The LED wall is ground-supported on Global Truss F34 with ballast and the PA is ground-stacked L'Acoustics Syva, so there is not a single rigging point or motor anywhere in this package. The stage is our decking. Practically, that means the address can land late and almost nothing about this package has to change. We would still rather walk the space, but we are not depending on it.</p>
+      </div>
+      <div class="promise-col">
+        <span class="kk">Two days of margin</span>
+        <h3>Set Friday, dark Saturday, confident Sunday</h3>
+        <p>Load-in is Friday the 2nd, and the service is not until Sunday afternoon. Everything gets built, powered, mapped and tested with a full clear day in hand. Nobody is chasing a dead panel or a bad data run an hour before doors. For a Sunday that only happens once, that gap is the single most valuable thing on this schedule, and it is why the show-day crew can be two people instead of eight.</p>
+      </div>
+    </div>
+
+    <div class="stats reveal">
+      <div class="stat"><div class="n">16'4"</div><div class="l">× 9'10" LED wall</div></div>
+      <div class="stat"><div class="n">30</div><div class="l">Absen p2.6 panels</div></div>
+      <div class="stat"><div class="n">26</div><div class="l">lighting fixtures</div></div>
+      <div class="stat"><div class="n">8</div><div class="l">crew on build day</div></div>
+      <div class="stat"><div class="n">2</div><div class="l">on site for service</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SCOPE ═══ -->
+<section id="scope">
+  <div class="wrap">
+    <span class="eyebrow sec-eyebrow reveal">What's in the truck</span>
+    <h2 class="sec-title reveal">The whole production.</h2>
+    <p class="sec-intro reveal" style="margin-bottom:40px">Video, audio, lighting, staging, presentation playback and power. All owned inventory, all prepped and bench-tested in our Austin shop on the 1st before it loads.</p>
+
+    <div class="rooms">
+
+      <div class="room reveal">
+        <div class="room-inner">
+          <div class="room-head">
+            <div>
+              <div class="room-num">01</div>
+              <div class="room-label">Ground-supported, no rigging required</div>
+              <h3>LED &amp; Video</h3>
+            </div>
+          </div>
+          <div class="spec">
+            <div class="spec-col">
+              <div class="h">The wall</div>
+              <ul>
+                <li>16'4" × 9'10" indoor LED, ground supported</li>
+                <li>(30) Absen NT2.6 V2 XL p2.6 panels across (6) cases</li>
+                <li>Global Truss F34 uprights on (4) 100 lb bases, clamps, fly bars, (20) sandbags</li>
+              </ul>
+            </div>
+            <div class="spec-col">
+              <div class="h">Processing &amp; signal</div>
+              <ul>
+                <li>Novastar VX1000 Pro processor</li>
+                <li>(2) Laird 4-channel Ethercon looms, 100'</li>
+                <li>Decimator MD-HX, BMD 12G SDI/HDMI conversion</li>
+                <li>Full SDI, HDMI and Ethercon cable package</li>
+              </ul>
+            </div>
+            <div class="spec-col">
+              <div class="h">Playback</div>
+              <ul>
+                <li>Blackmagic ATEM Mini Extreme ISO switcher</li>
+                <li>(2) Samsung T5 drives for ISO record</li>
+                <li>50" confidence monitor on a foldback stand</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="room reveal">
+        <div class="room-inner">
+          <div class="room-head">
+            <div>
+              <div class="room-num">02</div>
+              <div class="room-label">Speech-first, music-capable</div>
+              <h3>Audio</h3>
+            </div>
+          </div>
+          <div class="spec">
+            <div class="spec-col">
+              <div class="h">PA — ground-stacked</div>
+              <ul>
+                <li>L'Acoustics Syva + Syva Low, a matched pair on Syva bases</li>
+                <li>L'Acoustics LA4X amplification</li>
+                <li>Nothing is flown. Syva is a ground-stacked column, so no rigging points, no motors and no ceiling are needed anywhere in this package</li>
+                <li>This is premium L'Acoustics, not a compromise box picked because it was easy to stack. Tight vertical control means very little energy on the ceiling or back wall, which matters in a room we have not measured</li>
+              </ul>
+            </div>
+            <div class="spec-col">
+              <div class="h">Control</div>
+              <ul>
+                <li>Yamaha DM3D in a road case</li>
+                <li>iPad for wireless control from the floor</li>
+                <li>(2) XLR stagebox snakes, 8-channel and 8×4</li>
+              </ul>
+            </div>
+            <div class="spec-col">
+              <div class="h">Wireless</div>
+              <ul>
+                <li>Shure ULXD quad: (4) handheld SM58, (4) bodypack with UL4 lavalier</li>
+                <li>Plus a ULXD combo: (1) handheld, (1) bodypack with WL185</li>
+                <li>UA874 active directional antennas, rechargeable batteries, charging bay</li>
+              </ul>
+            </div>
+          </div>
+          <div class="room-crew"><b>Five wireless channels</b> across handhelds and lavaliers, so speakers, worship and anyone unplanned are all covered without swapping packs mid-service.</div>
+        </div>
+      </div>
+
+      <div class="room reveal">
+        <div class="room-inner">
+          <div class="room-head">
+            <div>
+              <div class="room-num">03</div>
+              <div class="room-label">Ground-supported front light, hair light and uplight</div>
+              <h3>Lighting</h3>
+            </div>
+          </div>
+          <div class="spec">
+            <div class="spec-col">
+              <div class="h">Front light</div>
+              <ul>
+                <li>(8) Prolights ECL ProfileFS with 19° lens tubes</li>
+                <li>Hard-edged profiles so faces are lit cleanly and the spill stays off the LED wall</li>
+              </ul>
+            </div>
+            <div class="spec-col">
+              <div class="h">Hair light</div>
+              <ul>
+                <li>(6) Martin MAC Aura XB</li>
+                <li>Back and top light to lift people off the screen behind them, which is the difference between a stage that reads flat and one with depth</li>
+              </ul>
+            </div>
+            <div class="spec-col">
+              <div class="h">Uplight &amp; colour</div>
+              <ul>
+                <li>(12) Robe Robin CycFX8</li>
+                <li>Omega brackets, clamps and safety cables throughout</li>
+              </ul>
+            </div>
+            <div class="spec-col">
+              <div class="h">Ground support</div>
+              <ul>
+                <li>12" box truss on (2) 140 lb bolt bases</li>
+                <li>Schedule 40 uprights on 50 lb bases with couplers</li>
+                <li>(36) sandbags of ballast — no rigging points used</li>
+              </ul>
+            </div>
+            <div class="spec-col">
+              <div class="h">Control</div>
+              <ul>
+                <li>GrandMA2 Command Wing</li>
+                <li>Lenovo Legion i7 running the show file</li>
+                <li>DMX turnarounds and full data package</li>
+              </ul>
+            </div>
+          </div>
+          <div class="room-crew"><b>Designed for camera and for the room.</b> Front light at levels that hold up if you capture any of this, Aura XB hair light to separate people from the wall, and colour that supports the moment rather than competing with the screen behind it. Every fixture stands on the floor.</div>
+        </div>
+      </div>
+
+      <div class="room reveal">
+        <div class="room-inner">
+          <div class="room-head">
+            <div>
+              <div class="room-num">04</div>
+              <div class="room-label">Decking, power and distribution</div>
+              <h3>Stage &amp; Power</h3>
+            </div>
+          </div>
+          <div class="spec">
+            <div class="spec-col">
+              <div class="h">Stage</div>
+              <ul>
+                <li>16' × 8' × 2' main deck with (2) stair units and black skirting</li>
+                <li>(2) 4' × 4' sound wings</li>
+                <li>Separate riser and skirt under the LED wall</li>
+              </ul>
+            </div>
+            <div class="spec-col">
+              <div class="h">Power</div>
+              <ul>
+                <li>Generator — the package does not assume house power</li>
+                <li>Indu Cube 120/208V Socapex + L2130 distro</li>
+                <li>Camlock turnaround set, Socapex runs</li>
+              </ul>
+            </div>
+            <div class="spec-col">
+              <div class="h">Cable</div>
+              <ul>
+                <li>Full AVL cable trunk set</li>
+                <li>Audio XLR trunk, 100' and 50' runs</li>
+                <li>Consumables and expendables</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SCHEDULE & CREW ═══ -->
+<section id="crew">
+  <div class="wrap">
+    <span class="eyebrow sec-eyebrow reveal">The plan</span>
+    <h2 class="sec-title reveal">Five days, one service.</h2>
+    <p class="sec-intro reveal" style="margin-bottom:34px;max-width:74ch">Prep in our shop Thursday, load Thursday evening, build Friday, rest Saturday, service Sunday. Strike the same night so you are not holding the venue into Monday.</p>
+
+    <div class="timeline reveal">
+      <div class="tl-row">
+        <div class="tl-when"><div class="date">Oct 1</div><div class="day">Thursday</div></div>
+        <div class="tl-what"><h3>Shop prep and load</h3><p>The whole package is pulled and bench-tested in Austin between 10:00 AM and 5:00 PM, then loaded that evening. Nothing goes on the truck untested.</p></div>
+      </div>
+      <div class="tl-row">
+        <div class="tl-when"><div class="date">Oct 2</div><div class="day">Friday</div></div>
+        <div class="tl-what"><h3>Delivery and full build<span class="star">✦</span></h3><p>On site 10:00 AM. Eight crew build the LED wall, stage, audio and lighting, power it all up, map the wall and program the lighting. Out by 5:00 PM with the room finished.</p></div>
+      </div>
+      <div class="tl-row">
+        <div class="tl-when"><div class="date">Oct 3</div><div class="day">Saturday</div></div>
+        <div class="tl-what"><h3>Dark day</h3><p>Nothing scheduled. The room sits built and tested. This is your margin: if anything needs attention, there is a whole day to deal with it calmly instead of at 1:00 PM Sunday.</p></div>
+      </div>
+      <div class="tl-row">
+        <div class="tl-when"><div class="date">Oct 4</div><div class="day">Sunday</div></div>
+        <div class="tl-what"><h3>Service, 2:00–8:00 PM<span class="star">✦</span></h3><p>Audio engineer and lighting designer on site for the full window. Strike begins at 8:00 PM with four crew and the room is clear by midnight.</p></div>
+      </div>
+      <div class="tl-row">
+        <div class="tl-when"><div class="date">Oct 5</div><div class="day">Monday</div></div>
+        <div class="tl-what"><h3>De-prep</h3><p>Gear back in Austin, inspected and checked in. That closes the order.</p></div>
+      </div>
+    </div>
+
+    <div class="reveal">
+    <table class="ctab">
+      <caption>Crew, by phase</caption>
+      <thead><tr><th>Phase</th><th>Positions</th><th class="r">Qty</th><th class="r">Time</th></tr></thead>
+      <tbody>
+        <tr><td>Build · Fri Oct 2, 10:00 AM–5:00 PM</td><td>Crew Chief (PM), Video Wall Technician (LED), Lighting Designer (L1), Stagehand ×5</td><td class="r q">8</td><td class="r q">1 day</td></tr>
+        <tr><td>Service · Sun Oct 4, 2:00–8:00 PM</td><td>Audio Engineer (A1), Lighting Designer (L1)</td><td class="r q">2</td><td class="r q">1 day</td></tr>
+        <tr><td>Strike · Sun Oct 4, 8:00 PM–12:00 AM</td><td>Labor Lead (LEAD), Stagehand ×3</td><td class="r q">4</td><td class="r q">4 hrs</td></tr>
+        <tr><td>Transport</td><td>Box truck, one each way</td><td class="r q">2</td><td class="r q">—</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <div class="cont reveal">
+      <div class="rt">the one open item</div>
+      <h3>We still need the address</h3>
+      <p>The venue has not been confirmed to us yet, and this quote is written against that. As above, the package is deliberately self-contained, so <b>the location is unlikely to change the price</b>. What it does change is the detail: dock or door access, how far we are pushing cases, whether the generator can sit somewhere sensible, and ceiling height over the LED wall.</p>
+      <p style="margin-top:12px">Send it whenever you have it and we will do a site walk at no cost before the build. If the venue turns out to have usable house power and an easy load-in, <b>we will take the generator back out and reduce the number</b> rather than quietly keep it in.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ WHAT WE NEED ═══ -->
+<section id="need">
+  <div class="wrap">
+    <span class="eyebrow sec-eyebrow reveal">From your side</span>
+    <h2 class="sec-title reveal">Four things, and none of them cost money.</h2>
+    <p class="sec-intro reveal" style="margin-bottom:38px">Stated now so nothing surfaces on build day.</p>
+
+    <div class="reqs reveal">
+      <div class="req">
+        <div class="rt">the venue</div>
+        <h3>Address and access</h3>
+        <p>The location, plus a contact who can get us in at <b>10:00 AM Friday</b>. We need to know whether we are loading through a dock, a roll-up or a front door, because that changes how many hours the build takes even though it does not change the price.</p>
+      </div>
+      <div class="req">
+        <div class="rt">saturday</div>
+        <h3>Somewhere secure overnight</h3>
+        <p>The room sits fully built from Friday evening through Sunday afternoon with roughly a truckload of equipment in it. We need that space <b>locked and not accessible to the public</b> across Saturday. This is the single largest risk on this job and it is worth confirming early.</p>
+      </div>
+      <div class="req">
+        <div class="rt">power</div>
+        <h3>Confirmation, either way</h3>
+        <p>Tell us what the venue actually has. If there is real service we can tie into, we will use it and <b>take the generator off the quote</b>. If there is not, we are already covered and nothing changes.</p>
+      </div>
+      <div class="req">
+        <div class="rt">the run of show</div>
+        <h3>Whatever exists, however rough</h3>
+        <p>Speakers, worship set, video content, who needs a mic and roughly when. It does not need to be finished. Getting even a draft to us before the build lets the lighting be programmed to your service instead of to a generic look.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ INVESTMENT ═══ -->
+<section id="investment">
+  <div class="wrap">
+    <div class="invest reveal">
+      <div class="inv-in">
+        <div class="inv-label">total investment</div>
+        <div class="inv-sub">equipment, crew, power and transport · no sales tax</div>
+        <div class="inv-figure">$25,301<span>.70</span></div>
+        <div class="inv-figcap">the complete production, delivered, built, run and struck</div>
+
+        <div class="inv-lines">
+          <div class="inv-head">By category</div>
+          <div class="inv-line"><div class="lab">Production <small>LED, audio, lighting, staging, playback, power and distro</small></div><div class="val">$17,966.70</div></div>
+          <div class="inv-line"><div class="lab">Logistics <small>all crew across build, service and strike, plus transport</small></div><div class="val">$7,335.00</div></div>
+          <div class="inv-line"><div class="lab">Subtotal</div><div class="val">$25,301.70</div></div>
+          <div class="inv-line tax"><div class="lab">Sales tax <small>exempt</small></div><div class="val">$0.00</div></div>
+          <div class="inv-line total"><div class="lab">Total due</div><div class="val">$25,301.70</div></div>
+        </div>
+
+        <div class="saved">
+          <div class="et">No sales tax on this quote.</div>
+          <p>This is quoted at <b>$0.00 sales tax</b> on the basis that Celebration Church holds a Texas exemption. If your exemption certificate is not already on file with us, send it across and we will keep it on the account so it applies automatically to anything you do with us from here.</p>
+        </div>
+
+        <div class="inv-note">Quotation № 1678 · order date 09-16-2026 · rental period 10-01-2026 to 10-05-2026 · venue address pending · a certificate of insurance naming Limitless Lights and Sound LLC as additional insured and loss payee is required for the rental period.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ COMMITMENTS ═══ -->
+<section id="commitments">
+  <div class="wrap">
+    <span class="eyebrow sec-eyebrow reveal">How we work</span>
+    <h2 class="sec-title reveal">The number stays open.</h2>
+    <p class="sec-intro reveal" style="margin-bottom:38px;max-width:74ch">Churches run on stewardship, and a quote that only moves upward is not much of a partnership. Three commitments, and they hold whether or not you ever use them.</p>
+
+    <div class="reqs reveal">
+      <div class="req">
+        <div class="rt">value engineering</div>
+        <h3>A session whenever you want one</h3>
+        <p>We will take this apart with you at any point <b>up until we prep on the 1st</b>. Drop a fixture count, shrink the wall, cut the generator if the venue has power. We will show you what each move does to the number before you decide, and there is no charge for the conversation.</p>
+      </div>
+      <div class="req">
+        <div class="rt">transparency</div>
+        <h3>Changes priced before they happen</h3>
+        <p>Anything that moves the scope gets quoted and approved <b>before we execute it</b>, and the whole budget is reissued each time so you hold one current number. You will not see a line on an invoice for the first time after the event.</p>
+      </div>
+      <div class="req">
+        <div class="rt">next time</div>
+        <h3>This becomes the template</h3>
+        <p>We keep the plot, the counts, the positions and what we learned on file against your account. <b>The next offsite clones this one forward</b> instead of being rebuilt from scratch, which is where a repeat partner starts actually saving you money.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ GOOD TO KNOW ═══ -->
+<section id="terms">
+  <div class="wrap">
+    <span class="eyebrow sec-eyebrow reveal">Good to know</span>
+    <h2 class="sec-title reveal">Clear terms, no surprises.</h2>
+    <p class="sec-intro reveal" style="margin-bottom:38px">The essentials up front, before anything loads.</p>
+
+    <div class="gtk reveal">
+      <div class="gtk-item">
+        <span class="lead">condition</span>
+        <h3>Tested in, inspected out</h3>
+        <p>Everything is bench-tested in our shop on the 1st before it loads, and inspected on return within a standard five-day window. Counts and any damage are assessed back in Austin, never rushed at a midnight strike.</p>
+      </div>
+      <div class="gtk-item">
+        <span class="lead">changes</span>
+        <h3>On-site changes absorbed</h3>
+        <p>We accommodate changes on the day within the bounds of safety and equipment capacity. Anything that materially expands the package is quoted before it happens, never after the fact.</p>
+      </div>
+      <div class="gtk-item">
+        <span class="lead">coverage</span>
+        <h3>Insurance &amp; additional insured</h3>
+        <p>A certificate of insurance with liability and inland-marine coverage, naming Limitless Lights and Sound LLC as additional insured and loss payee for the rental period, is required before the truck loads.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CLOSE ═══ -->
+<section class="close">
+  <div class="wrap">
+    <h2 class="reveal">Send us the address and <em>we'll take it from there.</em></h2>
+    <p class="reveal">TJ, everything here is built to survive an unconfirmed venue, so nothing is blocked on your end. When the location lands we will walk it, confirm power and access, and adjust the number down if the room lets us.</p>
+    <div class="sig reveal">
+      <div class="nm">Dash Speer</div>
+      <div class="rl">owner &amp; CEO, Limitless Lights + Sound</div>
+      <div class="ct">dash@limitlesslightsandsound.com&nbsp;&nbsp;·&nbsp;&nbsp;(281) 787-9069</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-in">
+      <span>Limitless Lights + Sound</span>
+      <span>prepared for Celebration Church Georgetown · № 1678</span>
+      <span>Austin · Houston · Dallas</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const io = new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.1,rootMargin:'0px 0px -5% 0px'});
+  document.querySelectorAll('.reveal').forEach((el,i)=>{el.style.transitionDelay=(Math.min(i,3)*65)+'ms';io.observe(el);});
+</script>
+</body>
+</html>
